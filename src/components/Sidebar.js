@@ -19,7 +19,7 @@ import {
   Storefront,
 } from "@mui/icons-material";
 
-function Sidebar() {
+const Sidebar = ({mode, setMode}) => {
   return (
     <Box
       flex={1}
@@ -94,7 +94,7 @@ function Sidebar() {
               <ListItemIcon>
                 <ModeNight />
               </ListItemIcon>
-              <Switch />
+              <Switch onChange={(e) =>setMode(mode === "light" ? "dark" : "light")}/>
             </ListItemButton>
           </ListItem>
         </List>
